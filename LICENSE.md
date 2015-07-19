@@ -1,2 +1,2 @@
 # Nothing advanced.
-# help yourself.
+# Help yourself.
