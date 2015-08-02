@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<section class="post-list">
+  <ul>
+    {% for post in site.posts %}
+      {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+      {% capture pyear %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+      <!-- 如果本篇是最新一篇（虽然显示在最上，其实是post.next == nil），打印本篇年份 -->
+      {% unless post.next %}
+        <p class="post-year">{{ year }}</p>
+        <li><span>{{ post.date | date: "%b %d" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% continue %}
+      {% endunless %}
+
+      <li><span>{{ post.date | date: "%b %d" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+      
+      {% if post.previous %}
+        {% if year != pyear %}
+          <p class="post-year">{{ pyear }}</p>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>

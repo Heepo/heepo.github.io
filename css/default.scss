@@ -1,0 +1,189 @@
+---
+---
+
+//variables
+$bgcolor: #F0EDEC;
+$lightbrown: #C2B8B4;
+$fontcolor: #736157;
+$textcolor: #666666;
+$shadowcolor: #6A6F6F;
+
+
+
+@import "reset";
+
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background-color: $bgcolor;
+  .container {
+    max-width: 1120px;
+    padding: 3% 3% 5%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px $shadowcolor;
+    .stlogo {
+      padding: 1rem 0;
+      img {
+        max-width: 156px;
+        max-height: 109px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .stnav {
+      ul {
+        li {
+          list-style: none;
+          display: block;
+          margin: 3rem auto;
+          letter-spacing: 0.5rem;
+          text-align: center;
+          a {
+            text-decoration: none;
+            color: $fontcolor;
+          }
+        }
+      }
+    }
+    .social-sites {
+      margin: 1rem auto;
+      ul {
+        text-align: center;
+        li {
+          list-style: none;
+          display: inline-block;
+          a {
+            text-decoration: none;
+            i {
+              color: $lightbrown;
+              margin: 0 0.5rem;
+              font-size: 1.5rem;
+              text-rendering: optimizeLegibility;
+              -webkit-transition: all 0.2s ease-in-out;
+              transition: all 0.2s ease-in-out;
+            }
+            i:hover {
+              color: $fontcolor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  min-height: 960px;
+  max-width: 1120px;
+  padding: 5% 3% 5%;
+  margin: 0 auto;
+  color: $textcolor;
+  article {
+    padding: 5%;
+    .post-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .post-date {
+      font-size: .8rem;
+      color: $lightbrown;
+      margin: 1rem auto;
+    }
+    .post-content {
+      letter-spacing: .3rem;
+      line-height: 2rem;
+      p {
+        margin: 1rem auto;
+      }
+    }
+  }
+  .recent-post {
+    ul {
+      list-style: none;
+      li {
+        border-radius: 3px;
+        box-shadow: 0 0 10px $shadowcolor;
+        margin: 5rem auto;
+        padding: 1rem 0;
+        a {
+          text-decoration: none;
+          color: $fontcolor;
+          font-size: 2rem;
+          letter-spacing: 1rem;
+          margin: 1rem 0 1rem 1rem;
+          display: block;
+          text-align: center;
+        }
+        .post-date {
+          font-size: .7rem;
+          text-align: center;
+          color: $lightbrown;
+          margin-bottom: 1em;
+        }
+        .excerpt {
+          padding: 5%;
+          line-height: 2rem;
+          letter-spacing: .3rem;
+        }
+      }
+    }
+  }
+  .post-list {
+    text-align: center;
+    .post-year {
+      font-size: 2rem;
+      background-color: $bgcolor;
+      border-radius: 10px;
+      margin: 2rem auto;
+      padding: 1%;
+      display: inline-block;
+      box-shadow: 0 0 10px $shadowcolor;
+      text-shadow: 0 1px 1px $shadowcolor;
+    }
+    li {
+      list-style: none;
+      background-color: $bgcolor;
+      margin: 0 3rem 1rem;
+      border-radius: 30px;
+      span {
+        font-size: .7rem;
+        color: $lightbrown;
+        margin-left: -2rem;
+      }
+      a {
+        text-decoration: none;
+        color: $textcolor;
+        font-size: 1.3rem;
+        line-height: 3rem;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 3%;
+  .states {
+    color: $fontcolor;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: $lightbrown;
+    }
+  }
+}
+
+

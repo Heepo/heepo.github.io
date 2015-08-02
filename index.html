@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>拉木的博客</title>
-</head>
-<body>
-	<p>拉木的博客</p>
-</body>
-</html>
+---
+layout: default
+title: 拉木的博客
+---
+<section class="recent-post">
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="post-date">{{ post.date | date: "%F"}}</p>
+        <div class="excerpt">
+          {{ post.excerpt }}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

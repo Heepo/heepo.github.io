@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<section class="categories">
+  {% capture categories %}
+    {% for category in site.categories %}
+      {{ category | first}},
+    {% endfor %}
+  {% endcapture %}
+  {{ categories }}
+</section>

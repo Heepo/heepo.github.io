@@ -1,0 +1,11 @@
+# site settings
+baseurl: "" # the subpath of the website
+
+# build settings
+exclude: ["Gemfile", "Gemfile.lock"]
+
+$bgcolor: #F0EDEC;
+$iconcolor: #C2B8B4;
+$fontcolor: #736157;
+$textcolor: #666666;
+$shadowcolor: #6A6F6F;
