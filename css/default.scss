@@ -172,6 +172,50 @@ main {
       }
     }
   }
+  .categories {
+    text-align: center;
+    .cat-list {
+      margin: 2rem auto;
+      p {
+        display: inline-block;
+        background-color: $bgcolor;
+        border-radius: 5px;
+        margin: .5rem;
+        padding: .5rem;
+        box-shadow: 0 0 5px $shadowcolor inset;
+      }
+    }
+    .cat-index {
+      text-align: center;
+      p {
+        font-size: 2rem;
+        background-color: $bgcolor;
+        border-radius: 10px;
+        margin: 2rem auto;
+        padding: 1%;
+        display: inline-block;
+        box-shadow: 0 0 10px $shadowcolor;
+        text-shadow: 0 1px 1px $shadowcolor;
+      }
+      li { 
+        list-style: none;
+        background-color: $bgcolor;
+        margin: 0 3rem 1rem;
+        border-radius: 30px;
+        span {
+          font-size: .7rem;
+          color: $lightbrown;
+          margin-left: -2rem;
+        }
+        a {
+          text-decoration: none;
+          color: $textcolor;
+          font-size: 1.3rem;
+          line-height: 3rem;
+        }
+      }
+    }
+  }
 }
 
 footer {
