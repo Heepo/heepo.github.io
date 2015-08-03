@@ -249,6 +249,11 @@ main {
 footer {
   padding: 3%;
   margin-top: 5rem;
+  iframe {
+      display: block;
+      margin: 0 auto 1rem;
+      background-color: transparent;
+    }
   .states {
     color: $fontcolor;
     text-align: center;
