@@ -14,8 +14,7 @@ layout: default
   <div class="cat-list">
     {% for num in (0..site.categories.size) %}
       {% unless forloop.last %}
-        {% capture index %}{{ cat[num] }}{% endcapture %}
-        <p>{{ cat[num] }}</p>
+        <p><a href="#{{ num }}">{{ cat[num] }}</a></p>
       {% endunless %}
     {% endfor %}
   </div>
@@ -23,8 +22,8 @@ layout: default
   <div class="cat-index" >
     {% for num in (0..site.categories.size) %}  
       {% unless forloop.last %}
-        
-        <p id="{{ index }}">{{ cat[num] }}</p>
+        {% capture index %}{{ cat[num] }}{% endcapture %}
+        <p id="{{ num }}">{{ cat[num] }}</p>
         {% for post in site.categories[index] %}
           <li><span>{{ post.date | date: "%b %d" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}

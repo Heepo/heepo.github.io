@@ -180,9 +180,20 @@ main {
         display: inline-block;
         background-color: $bgcolor;
         border-radius: 5px;
+        font-size: 1rem;
         margin: .5rem;
         padding: .5rem;
-        box-shadow: 0 0 5px $shadowcolor inset;
+        box-shadow: 0 0 5px $shadowcolor;
+        text-shadow: 0 0 .3px $shadowcolor;
+        a {
+          text-decoration: none;
+          color: $textcolor;
+          -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+        }
+        a:hover {
+          color: $fontcolor;
+        }
       }
     }
     .cat-index {
@@ -192,10 +203,9 @@ main {
         background-color: $bgcolor;
         border-radius: 10px;
         margin: 2rem auto;
-        padding: 1%;
+        padding: 3%;
         display: inline-block;
-        box-shadow: 0 0 10px $shadowcolor;
-        text-shadow: 0 1px 1px $shadowcolor;
+        box-shadow: 0 0 5px $shadowcolor inset;
       }
       li { 
         list-style: none;
@@ -213,6 +223,24 @@ main {
           font-size: 1.3rem;
           line-height: 3rem;
         }
+      }
+    }
+  }
+  .about {
+    text-align: center;
+    line-height: 2rem;
+    .cn {
+      max-width: 336px;
+      letter-spacing: .3rem;
+      margin: 1rem auto;
+      padding: 1rem 1rem 2rem;
+      border-bottom: 2px solid $lightbrown;
+    }
+    .en {
+      letter-spacing: .1rem;
+      padding: 1rem;
+      span {
+        font-style: oblique;
       }
     }
   }
