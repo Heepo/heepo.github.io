@@ -17,4 +17,5 @@
 }
 .icon-weibo:before { content: "\e600"; }
 .icon-twitter:before { content: "\e602"; }
+.icon-music:before { content: "\e603"; }
 .icon-github:before { content: "\e601"; }
