@@ -61,7 +61,7 @@ header {
       }
     }
     .social-sites {
-      margin: 3rem auto;
+      margin: 3rem auto 1rem;
       ul {
         text-align: center;
         li {
@@ -88,7 +88,6 @@ header {
 }
 
 main {
-  
   max-width: 1120px;
   padding: 5% 3% 5%;
   margin: 0 auto;
@@ -98,6 +97,7 @@ main {
     .post-title {
       font-size: 2rem;
       margin-bottom: 1rem;
+      line-height: 2.5rem;
     }
     .post-date {
       font-size: .8rem;
@@ -106,9 +106,9 @@ main {
     }
     .post-content {
       letter-spacing: .3rem;
-      line-height: 2rem;
+      line-height: 1.8rem;
       p {
-        margin: 1rem auto;
+        margin: 1.7rem auto;
       }
     }
   }
@@ -118,25 +118,25 @@ main {
       li {
         border-radius: 10px;
         box-shadow: 0 0 10px $shadowcolor;
-        margin: 5rem .5rem;
+        margin: 2rem 0 3rem;
         padding: 1rem .5rem;
         a {
           text-decoration: none;
           color: $fontcolor;
-          font-size: 2rem;
-          letter-spacing: 1rem;
-          margin: 1rem 0 1rem 1rem;
-          display: block;
-          text-align: center;
+          font-size: 1.5rem;
+          letter-spacing: .2rem;
+          line-height: 2rem;
+          margin: 1rem 1.5rem .4rem 1rem;
+          display: inline-block;
         }
         .post-date {
           font-size: .7rem;
-          text-align: center;
           color: $lightbrown;
-          margin-bottom: 1em;
+          margin: 0 0 .3rem 1.2rem;
         }
         .excerpt {
-          padding: 5%;
+          padding: 3% .6rem 5% 1.1rem;
+          font-size: .9rem;
           line-height: 2rem;
           letter-spacing: .3rem;
         }
@@ -145,31 +145,35 @@ main {
   }
   .post-list {
     text-align: center;
+    padding: 0 5%;
     .post-year {
       font-size: 2rem;
-      background-color: $bgcolor;
-      border-radius: 10px;
+      color: $lightbrown;
+      border-radius: 0.9rem;
       margin: 2rem auto 1rem;
-      padding: 2% 3%;
+      padding: 3% 3% 2%;
       display: inline-block;
-      box-shadow: 0 0 10px $shadowcolor;
-      text-shadow: 0 1px 1px $shadowcolor;
+      box-shadow: 0 0 5px $shadowcolor;      
     }
     li {
       list-style: none;
       background-color: $bgcolor;
-      margin: 0 3rem 2rem;
+      margin: 1rem auto 1.5rem;
       border-radius: 30px;
+      padding: 3%;
+      position: relative;
       span {
-        font-size: .7rem;
+        font-size: .5rem;
         color: $lightbrown;
-        margin-left: -2rem;
+        position: absolute;
+        bottom: 38%;
+        left: .5rem;
       }
       a {
         text-decoration: none;
         color: $textcolor;
-        font-size: 1.3rem;
-        line-height: 3rem;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
       }
     }
   }
@@ -180,12 +184,12 @@ main {
       p {
         display: inline-block;
         background-color: $bgcolor;
-        border-radius: 10px;
+        border-radius: .7rem;
         font-size: 1rem;
         margin: .5rem;
         padding: .5rem;
         box-shadow: 0 0 5px $shadowcolor;
-        text-shadow: 0 0 .3px $shadowcolor;
+        font-weight: 600;
         a {
           text-decoration: none;
           color: $textcolor;
@@ -199,8 +203,10 @@ main {
     }
     .cat-index {
       text-align: center;
+      padding: 0 5%;
       p {
         font-size: 1.5rem;
+        color: $lightbrown;
         margin: 2rem auto 1rem;
         padding: 3%;
         display: inline-block;
@@ -209,18 +215,22 @@ main {
       li { 
         list-style: none;
         background-color: $bgcolor;
-        margin: 0 3rem 1rem;
+        margin: 0 auto 1rem;
         border-radius: 30px;
+        padding: 3%;
+        position: relative;
         span {
-          font-size: .7rem;
+          font-size: .5rem;
           color: $lightbrown;
-          margin-left: -2rem;
+          position: absolute;
+          bottom: 38%;
+          left: .5rem;
         }
         a {
           text-decoration: none;
           color: $textcolor;
-          font-size: 1.3rem;
-          line-height: 3rem;
+          font-size: 1.1rem;
+          line-height: 1.5rem;
         }
       }
     }
@@ -246,15 +256,32 @@ main {
   }
 }
 
+@keyframes colorchanging {
+  from {color: $lightbrown;}
+  to {color: $textcolor;}
+}
+@-moz-keyframes colorchanging {
+  from {color: $lightbrown;}
+  to {color: $textcolor;}
+}
+@-webkit-keyframes colorchanging {
+  from {color: $lightbrown;}
+  to {color: $textcolor;}
+}
+@-o-keyframes colorchanging {
+  from {color: $lightbrown;}
+  to {color: $textcolor;}
+}
+
 footer {
-  padding: 3%;
-  margin-top: 5rem;
+  padding: 3% 5%;
+  margin-top: 3rem;
   position: relative;
   iframe {
       position: absolute;
       left: 50%;
       bottom: 4rem;
-      margin-left: -240px;
+      margin-left: -253px;
       background-color: transparent;
       opacity: 0;
       z-index: 1;
@@ -265,28 +292,95 @@ footer {
     position: absolute;
     left: 50%;
     bottom: 4.6rem;
-    margin-left: -230px;
+    margin-left: -243px;
     z-index: -1;
-    a {
+    i {
       display: block;
       text-align: right;
       padding: .5rem;
+      animation-name: colorchanging;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      animation-direction:alternate;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-direction:alternate;
+      -webkit-animation-name: colorchanging;
+      -webkit-animation-duration: 1.5s;
+      -webkit-animation-iteration-count: infinite;
+    }
+  }
+  .states {
+    color: $lightbrown;
+    text-align: center;
+    a {
       text-decoration: none;
       color: $fontcolor;
     }
   }
-  .states {
-    color: $fontcolor;
-    text-align: center;
-    a {
-      text-decoration: none;
-      color: $lightbrown;
-    }
-  }
 }
 
-@media only screen and (min-width: 20em) {
+@media only screen and (min-width: 30em) {
+  header {
+    .container {
+      position: relative;
+      padding-bottom: 1%;
+      max-height: 14.7rem;
+      .stnav {
+        ul {
+          text-align: center;
+          li {
+            display: inline-block;
+            margin: 2rem 1.1rem 0;
+            letter-spacing: .1rem;
+            text-indent: .1rem;
 
+          }
+        }
+      }
+      .social-sites {
+        ul {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          li {
+            a {
+              i {
+                font-size: 1rem;
+                margin: 0 .1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    .recent-post {
+      ul {
+        li {
+          margin: 1.6rem 4rem 4rem;
+        }
+      }
+    }
+    .post-list {
+      .post-year {
+        margin: 1.5rem auto 1.5rem;
+      }
+      li {
+        margin: 0 auto 1.3rem;
+        max-width: 25rem;
+      }
+    }
+    .categories {
+      .cat-index {
+        li {
+          margin: 0 auto 1.3rem;
+          max-width: 25rem;
+        }
+      }
+    }
+  }
 }
 
 
