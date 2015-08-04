@@ -2,8 +2,8 @@
  * Prevent iOS text size adjust after orientation change
  * without disabling user zoom.
  */
-html {
-  font-family: Tahoma, Arial, Roboto, "Droid Sans", "Helvetica Neue", "Droid Sans Fallback", "Heiti SC", "Hiragino Sans GB", "Microsoft YaHei", Simsun, sans-self;
+body {
+  font-family: "Hiragino Sans GB", Tahoma, Arial, Roboto, "Droid Sans", "Helvetica Neue", Helvetica, "Droid Sans Fallback", "Heiti SC", "Microsoft YaHei", Simsun, sans-self;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -15,7 +15,7 @@ section, audio {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-weight: normal;
   vertical-align: baseline;
 }
 
