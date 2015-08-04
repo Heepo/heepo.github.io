@@ -30,11 +30,10 @@ $shadowcolor: #6A6F6F;
 
 header {
   background-color: $bgcolor;
+  box-shadow: 0 0 10px $shadowcolor;
   .container {
-    max-width: 1120px;
     padding: 3% 3% 5%;
     margin: 0 auto;
-    box-shadow: 0 0 10px $shadowcolor;
     .stlogo {
       padding: 1rem 0;
       img {
@@ -192,7 +191,7 @@ main {
         font-weight: 600;
         a {
           text-decoration: none;
-          color: $textcolor;
+          color: $lightbrown;
           -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
         }
@@ -329,24 +328,25 @@ footer {
       .stnav {
         ul {
           text-align: center;
+          padding-bottom: 1rem;
           li {
             display: inline-block;
             margin: 2rem 1.1rem 0;
             letter-spacing: .1rem;
             text-indent: .1rem;
-
           }
         }
       }
       .social-sites {
+        margin: 1rem auto 0;
+        position: absolute;
+        top: 0;
+        right: 1rem;
         ul {
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
           li {
             a {
               i {
-                font-size: 1rem;
+                font-size: 1.3em;
                 margin: 0 .1rem;
               }
             }
@@ -383,4 +383,82 @@ footer {
   }
 }
 
+@media only screen and (min-width: 48em) {
+  header {
+    .container {
+      max-width: 60rem;
+      text-align: justify;
+      position: relative;
+      margin: 0 10%;
+      padding: 0;
+      .stlogo {
+        display: inline-block;
+      }
+      .stnav {
+        position: absolute;
+        right: 10%;
+        bottom: 15%;
+        ul {
+          padding-bottom: 0;
+          li {
+            display: inline-block;
+            font-size: 1rem;
+            margin: 0 2em;
+            a {
+              color: $fontcolor;
+              -webkit-transition: all 0.2s ease-in-out;
+              transition: all 0.2s ease-in-out;
+            }
+            a:hover {
+              color: $lightbrown;
+            }
+          }
+        }
+      }
+      .social-sites {
+        right: -4rem;
+        top: 5.3rem;
+        ul {
+          display: inline-block;
+          li {
+            a {
+              i {
+                font-size: 1.2rem;
+                margin: 0 .4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    article {
+      padding: 5% 10%;
+    }
+    .recent-post {
+      ul {
+        display: block;
+        margin: 0 auto;
+        max-width: 50rem;
+      }
+    }
+    .post-list {
+      .post-year {
+        margin-top: 3.5rem;
+        padding: .2em 3% .1em;
+      }
+      li {
+        padding: 1em 3% 1em;
+      }
+    }
+    .categories {
+      .cat-index {
+        li {
+          padding: 1em 3% 1em;
+        }
+      }
+    }
+  }
+}
 
