@@ -27,7 +27,6 @@ $shadowcolor: #6A6F6F;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }
-
 header {
   background-color: $bgcolor;
   box-shadow: 0 0 10px $shadowcolor;
@@ -87,7 +86,6 @@ header {
 }
 
 main {
-  max-width: 1120px;
   padding: 5% 3% 5%;
   margin: 0 auto;
   color: $textcolor;
