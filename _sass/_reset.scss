@@ -2,6 +2,22 @@
  * Prevent iOS text size adjust after orientation change
  * without disabling user zoom.
  */
+
+//variables
+$headerbgc: #73A02F;
+$lowkeyc: #344f2c;
+$fontcolor: #344f2c;
+$textcolor: black;
+$shadowcolor: #6A6F6F;
+$titlecolor: black;
+$contentcolor: black;
+$postlistcolor: white;
+$postlistbgc: #74AF2D;
+$listbgc: #74AF2D;
+$listcolor: white;
+$transpost: #A42F11;
+$transpre: #74AF2D;
+
 body {
   font-family: "Hiragino Sans GB", Tahoma, Arial, Roboto, "Droid Sans", "Helvetica Neue", Helvetica, "Droid Sans Fallback", "Heiti SC", "Microsoft YaHei", Simsun, sans-self;
   -ms-text-size-adjust: 100%;

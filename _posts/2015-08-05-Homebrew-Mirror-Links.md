@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Homebrew镜像源
+categories: 工具
+tags: Homebrew 镜像源
 ---
 替换homebrew默认源为国内镜像源  
 
@@ -34,7 +36,7 @@ $ brew update
 方法二
 {% highlight bash %}
 $ cd /usr/local
-$ git remote set-url origin git://mirrors.ustc.edu.cn/homebrew.gi
+$ git remote set-url origin git://mirrors.ustc.edu.cn/homebrew.git
 {% endhighlight %} 
 国内开源镜像源:
 清华镜像源: http://mirrors.tuna.tsinghua.edu.cn/  

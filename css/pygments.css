@@ -7,14 +7,14 @@
        url('WOFF/OTF/SourceCodePro-Regular.otf.woff') format('woff'),
        url('TTF/SourceCodePro-Regular.ttf') format('truetype');
 }
+
 .highlight {
-  padding: 1% 2%;
   display: block;
   margin: 0 auto;
-  background-color: #ECE8E7;
-  border-radius: 10px;
-  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 10px grey;
+  letter-spacing: 0 ;
   font-weight: 500;
+  overflow: scroll;
 }
 .lineno {
   border-right: 2px solid #004247;
@@ -22,7 +22,7 @@
   padding: 0 10px 0 0;
   margin: 0 auto;
 }
-.highlight pre code span, .language-bash {
+.highlight pre code span {
   font-family: 'Source Code Pro', "Heiti SC", Helvetica, "Hiragino Sans GB", Arial, "Helvetica Neue", "Microsoft YaHei", Simsun, sans-self;
 }
 .highlight pre code .c,
@@ -31,9 +31,33 @@
 .highlight pre code .cs {
   font-weight: 100;
 }
+
+/*Bash Settings*/
 .language-bash {
-  white-space: pre-wrap;
+  overflow: auto;
+  letter-spacing: 0;
+  font-size: .5rem;
+  font-family: 'Source Code Pro', "Heiti SC", Helvetica, 
+                Arial,"Microsoft YaHei", sans-self;
 }
+.language-bash .k,
+.language-bash .s1 {
+  color: black;
+}
+.language-bash .o {
+  color: #C4302E;
+}
+.language-bash .nv,
+.language-bash .nb {
+  color: #118700;
+}
+@media only screen and (min-width: 48em) {
+  .language-bash {
+    font-size: .8rem;
+  }
+}
+
+/*Specific Settings*/
 .hll {
   background-color: #49483e;
 }

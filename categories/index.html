@@ -14,7 +14,10 @@ layout: default
   <div class="cat-list">
     {% for num in (0..site.categories.size) %}
       {% unless forloop.last %}
-        <p><a href="#{{ num }}">{{ cat[num] }}</a></p>
+        {% capture index %}{{ cat[num] }}{% endcapture %}
+        <p><a href="#{{ num }}">{{ cat[num] }}
+          <sup class="count">{{site.categories[index].size}}</sup>
+        </a></p>
       {% endunless %}
     {% endfor %}
   </div>

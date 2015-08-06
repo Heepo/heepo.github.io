@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Code Highlighter 测试
-categories: C++
+categories: 技术 OJ
+tags: C/C++ 算法
 ---
 {% highlight C++ linenos %}
 #include <stdio.h>

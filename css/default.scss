@@ -1,12 +1,8 @@
 ---
 ---
-
-//variables
-$bgcolor: #F0EDEC;
-$lightbrown: #C2B8B4;
-$fontcolor: #736157;
-$textcolor: #666666;
-$shadowcolor: #6A6F6F;
+/*text-shadow: 2px 2px 10px grey;*/
+/*-webkit-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;*/
 
 
 
@@ -28,7 +24,6 @@ $shadowcolor: #6A6F6F;
     -moz-osx-font-smoothing: grayscale;
 }
 header {
-  background-color: $bgcolor;
   box-shadow: 0 0 10px $shadowcolor;
   .container {
     padding: 3% 3% 5%;
@@ -54,6 +49,12 @@ header {
           a {
             text-decoration: none;
             color: $fontcolor;
+            text-shadow: 2px 2px 10px grey;
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+          }
+          a:hover {
+            text-shadow: 2px 2px 10px white;
           }
         }
       }
@@ -68,7 +69,8 @@ header {
           a {
             text-decoration: none;
             i {
-              color: $lightbrown;
+              text-shadow: 2px 2px 10px grey;
+              color: $lowkeyc;
               margin: 0 0.5rem;
               font-size: 1.5rem;
               text-rendering: optimizeLegibility;
@@ -77,6 +79,7 @@ header {
             }
             i:hover {
               color: $fontcolor;
+              text-shadow: 2px 2px 10px white;
             }
           }
         }
@@ -87,26 +90,61 @@ header {
 
 main {
   padding: 5% 3% 5%;
-  margin: 0 auto;
-  color: $textcolor;
   article {
     padding: 5%;
-    .post-title {
+    .post-title, .poe-title {
       font-size: 2rem;
       margin-bottom: 1rem;
       line-height: 2.5rem;
+      color: $titlecolor;
+      text-shadow: 2px 2px 10px grey;
     }
-    .post-date {
+    .post-date, .poe-date {
       font-size: .8rem;
-      color: $lightbrown;
+      color: $lowkeyc;
       margin: 1rem auto ;
+      text-shadow: 2px 2px 10px grey;
     }
-    .post-content {
-      letter-spacing: .3rem;
-      line-height: 1.8rem;
+    .post-content, .poe-content {
+      letter-spacing: 0.1rem;
+      line-height: 1.5rem;
+      color: $contentcolor;
+      text-shadow: 2px 2px 10px grey;
       p {
-        margin: 1.7rem auto;
+        margin: 1rem auto;
       }
+    }
+  }
+  .page-index {
+    text-align: center;
+    padding: 0 5%;
+    max-width: 20rem;
+    margin: 0 auto;
+    span {
+      list-style: none;
+      display: block;
+      background-color: $postlistbgc;
+      margin: 1rem auto 1.5rem;
+      padding: 3%;
+      position: relative;
+      a {
+        text-decoration: none;
+        color: $postlistcolor;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+    .pre {
+      border-top-left-radius: 2em;
+      border-bottom-left-radius: 2em;
+      border-top-right-radius: .5em;
+      border-bottom-right-radius: .5em;
+    }
+    .next {
+      border-top-left-radius: .5em;
+      border-bottom-left-radius: .5em;
+      border-top-right-radius: 2em;
+      border-bottom-right-radius: 2em;
     }
   }
   .recent-post {
@@ -119,23 +157,32 @@ main {
         padding: 1rem .5rem;
         a {
           text-decoration: none;
-          color: $fontcolor;
+          color: $titlecolor;
+          text-shadow: 2px 2px 10px grey;
           font-size: 1.5rem;
           letter-spacing: .2rem;
-          line-height: 2rem;
+          line-height: 1.7rem;
           margin: 1rem 1.5rem .4rem 1rem;
           display: inline-block;
         }
         .post-date {
           font-size: .7rem;
-          color: $lightbrown;
+          color: $lowkeyc;
+          text-shadow: 2px 2px 10px grey;
           margin: 0 0 .3rem 1.2rem;
         }
         .excerpt {
           padding: 3% .6rem 5% 1.1rem;
           font-size: .9rem;
-          line-height: 2rem;
-          letter-spacing: .3rem;
+          line-height: 1.5rem;
+          letter-spacing: .1rem;
+          text-shadow: 2px 2px 10px grey;
+          .highlight {
+            padding-right: 3%;
+            pre {
+              overflow: hidden;
+            }
+          }
         }
       }
     }
@@ -145,7 +192,7 @@ main {
     padding: 0 5%;
     .post-year {
       font-size: 2rem;
-      color: $lightbrown;
+      color: $lowkeyc;
       border-radius: 0.9rem;
       margin: 2rem auto 1rem;
       padding: 3% 3% 2%;
@@ -154,79 +201,86 @@ main {
     }
     li {
       list-style: none;
-      background-color: $bgcolor;
+      background-color: $postlistbgc;
       margin: 1rem auto 1.5rem;
       border-radius: 30px;
       padding: 3%;
       position: relative;
       span {
         font-size: .5rem;
-        color: $lightbrown;
+        color: $postlistcolor;
         position: absolute;
-        bottom: 38%;
+        bottom: 36%;
         left: .5rem;
       }
       a {
         text-decoration: none;
-        color: $textcolor;
-        font-size: 1.1rem;
+        color: $postlistcolor;
+        font-size: 1rem;
         line-height: 1.5rem;
       }
     }
   }
-  .categories {
+  .categories, .tags {
     text-align: center;
-    .cat-list {
+    .cat-list, .tag-list {
       margin: 2rem auto;
       p {
         display: inline-block;
-        background-color: $bgcolor;
+        background-color: $listbgc;
         border-radius: .7rem;
         font-size: 1rem;
         margin: .5rem;
         padding: .5rem;
-        box-shadow: 0 0 5px $shadowcolor;
-        font-weight: 600;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         a {
           text-decoration: none;
-          color: $lightbrown;
+          color: $listcolor;
+          text-transform: uppercase;
+          letter-spacing: .1rem;
           -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
         }
-        a:hover {
-          color: $fontcolor;
+      }
+      p:hover {
+        background-color: $listcolor;
+        a {
+          color: $listbgc;
+          font-size: 1.3rem;
         }
       }
     }
-    .cat-index {
+    .cat-index, .tag-index {
       text-align: center;
       padding: 0 5%;
+      margin-bottom: 15%;
       p {
         font-size: 1.5rem;
-        color: $lightbrown;
+        color: $lowkeyc;
         margin: 2rem auto 1rem;
-        padding: 3%;
+        padding: 0 3%;
         display: inline-block;
-        border-bottom: 2px solid $lightbrown;
+        border-bottom: 2px solid $lowkeyc;
       }
       li { 
         list-style: none;
-        background-color: $bgcolor;
+        background-color: $listbgc;
         margin: 0 auto 1rem;
         border-radius: 30px;
         padding: 3%;
         position: relative;
         span {
           font-size: .5rem;
-          color: $lightbrown;
+          color: $listcolor;
           position: absolute;
-          bottom: 38%;
+          bottom: 36%;
           left: .5rem;
         }
         a {
           text-decoration: none;
-          color: $textcolor;
-          font-size: 1.1rem;
+          color: $listcolor;
+          font-size: 1rem;
           line-height: 1.5rem;
         }
       }
@@ -241,11 +295,13 @@ main {
       letter-spacing: .3rem;
       margin: 1rem auto;
       padding: 1rem 1rem 2rem;
-      border-bottom: 2px solid $lightbrown;
+      text-shadow: 2px 2px 10px grey;      
+      border-bottom: 2px solid $lowkeyc;
     }
     .en {
       letter-spacing: .1rem;
       padding: 1rem;
+      text-shadow: 2px 2px 10px grey;
       span {
         font-style: oblique;
       }
@@ -254,45 +310,49 @@ main {
 }
 
 @keyframes colorchanging {
-  from {color: $lightbrown;}
-  to {color: $textcolor;}
+  from {color: $transpre;}
+  to {color: $transpost;}
 }
 @-moz-keyframes colorchanging {
-  from {color: $lightbrown;}
-  to {color: $textcolor;}
+  from {color: $transpre;}
+  to {color: $transpost;}
 }
 @-webkit-keyframes colorchanging {
-  from {color: $lightbrown;}
-  to {color: $textcolor;}
+  from {color: $transpre;}
+  to {color: $transpost;}
 }
 @-o-keyframes colorchanging {
-  from {color: $lightbrown;}
-  to {color: $textcolor;}
+  from {color: $transpre;}
+  to {color: $transpost;}
 }
 
 footer {
   padding: 3% 5%;
-  margin-top: 3rem;
+  margin-top: 5%;
+  min-height: 7rem;
+  padding-top: 4rem;
   position: relative;
+  box-shadow: 0 0 10px $shadowcolor;
   iframe {
       position: absolute;
       left: 50%;
-      bottom: 4rem;
+      bottom: 3.7rem;
       margin-left: -253px;
       background-color: transparent;
       opacity: 0;
-      z-index: 1;
+      z-index: 3;
     }
   .hide {
     width: 260px;
     height: 32px;
     position: absolute;
     left: 50%;
-    bottom: 4.6rem;
+    bottom: 4.3rem;
     margin-left: -243px;
-    z-index: -1;
+    z-index: 2;
     i {
       display: block;
+      text-shadow: 2px 2px 10px grey;
       text-align: right;
       padding: .5rem;
       animation-name: colorchanging;
@@ -308,11 +368,11 @@ footer {
     }
   }
   .states {
-    color: $lightbrown;
+    color: $fontcolor;
     text-align: center;
     a {
       text-decoration: none;
-      color: $fontcolor;
+      color: $transpre;
     }
   }
 }
@@ -354,6 +414,22 @@ footer {
     }
   }
   main {
+    article {
+      .post-title {
+        text-align: center;
+      }
+      .post-date {
+        text-align: center;
+        margin: 1rem auto 2rem;
+      }
+      .poe-title, .poe-date, .poe-content {
+        margin-left: 2rem;
+        text-align: center;
+      }
+      .post-content {
+        margin: 0 10% 0 15%;
+      }
+    }
     .recent-post {
       ul {
         li {
@@ -370,8 +446,8 @@ footer {
         max-width: 25rem;
       }
     }
-    .categories {
-      .cat-index {
+    .categories, .tags {
+      .cat-index, .tag-index {
         li {
           margin: 0 auto 1.3rem;
           max-width: 25rem;
@@ -401,14 +477,14 @@ footer {
           li {
             display: inline-block;
             font-size: 1rem;
-            margin: 0 2em;
+            margin: 0 1.3em;
             a {
               color: $fontcolor;
               -webkit-transition: all 0.2s ease-in-out;
               transition: all 0.2s ease-in-out;
             }
             a:hover {
-              color: $lightbrown;
+              color: $lowkeyc;
             }
           }
         }
@@ -431,8 +507,24 @@ footer {
     }
   }
   main {
+    overflow: hidden;
     article {
       padding: 5% 10%;
+      .poe-title, .poe-date, .poe-content {
+        text-align: center;
+      }
+      .post-content {
+        margin: 0 10% 0 15%;
+      }
+    }
+    .page-index {
+      max-width: 70em;
+      span {
+        display: inline-block;
+        margin: 0 1em;
+        padding: .3rem 3%;
+        min-width: 15rem;
+      }
     }
     .recent-post {
       ul {
@@ -450,8 +542,8 @@ footer {
         padding: 1em 3% 1em;
       }
     }
-    .categories {
-      .cat-index {
+    .categories, .tags {
+      .cat-index, .tag-index {
         li {
           padding: 1em 3% 1em;
         }
