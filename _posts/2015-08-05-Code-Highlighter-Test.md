@@ -1,9 +1,17 @@
 ---
 layout: post
 title: Code Highlighter 测试
-categories: 技术 OJ
-tags: C/C++ 算法
+categories: 技术
+tags: C/C++ 算法 OJ Jekyll
 ---
+对输入的 n 个数进行排序并输出
+
+输入：输入的第一行包括一个整数 n(1<=n<=100)。接下来的一行包括 n 个整数  
+输出：可能有多组测试数据,对于每组数据,将排序后的 n 个整数输出,每个数后面都有一个空格。每组测试数据的结果占一行  
+样例输入：4  
+1432  
+样例输出：1234  
+
 {% highlight C++ linenos %}
 #include <stdio.h>
   

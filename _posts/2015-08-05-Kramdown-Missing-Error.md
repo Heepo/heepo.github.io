@@ -4,7 +4,8 @@ title: Kramdown Missing 处理
 categories: 技术
 tags: Jekyll Kramdown
 ---
-今天在尝试使用Rouge来实现代码高亮时，更新了下Jekyll为最新版本，更新后却报了"Missing dependency: kramdown"错误，如下
+今天在尝试使用Rouge来实现代码高亮时，更新了下Jekyll为最新版本，更新后却报了"Missing dependency: kramdown"错误，如下  
+
 {% highlight bash %}
 ➜  repository git:(branch) ✗ jekyll serve
 You are missing a library required for Markdown. Please run:
