@@ -308,7 +308,7 @@ footer {
       background-color: $headerbgc;
       .stlogo {
         text-align: left;
-        padding: .8em 0 0 .5em;
+        padding: 1em 0 1.5em .5em;
         a {
           text-decoration: none;
           font-family: 'Source Code Pro';
@@ -340,7 +340,6 @@ footer {
         }
       }
       .social-sites {
-        display: inline-block;
         ul {
           position: absolute;
           right: .8em;
@@ -403,13 +402,16 @@ footer {
         top: 1em;
         padding-right: 1.5em;
       }
-      .social-sites ul {
-        right: auto;
-        left: 3.5em;
-        top: 2.4em;
-        li a i {
-          color: $headerbgc;
-          font-size: 1.2em;
+      .social-sites {
+        /*display: inline-block;*/
+        ul {
+          right: auto;
+          left: 3.5em;
+          top: 2.4em;
+          li a i {
+            color: $headerbgc;
+            font-size: 1.2em;
+          }
         }
       }
     }
