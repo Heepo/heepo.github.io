@@ -377,6 +377,24 @@ footer {
         letter-spacing: .2em;
         line-height: 1.5em;
       }
+      .poe-title {
+        text-align: center;
+        color: $postlistcolor;
+      }
+      .poe-date {
+        text-align: center;
+      }
+      .post-content {
+        padding: 0 1em 0 2em;
+      }
+      .poe-content {
+        text-align: center;
+        letter-spacing: .5em;
+        line-height: 2em;
+        p {
+          margin: 3em;
+        }
+      }
     }
     .page-index {
       border-top: 1px dashed $borderc;
