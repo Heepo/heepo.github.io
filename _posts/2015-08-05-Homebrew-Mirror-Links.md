@@ -38,6 +38,6 @@ $ brew update
 $ cd /usr/local
 $ git remote set-url origin git://mirrors.ustc.edu.cn/homebrew.git
 {% endhighlight %} 
-国内开源镜像源:
+国内开源镜像源:  
 清华镜像源: http://mirrors.tuna.tsinghua.edu.cn/  
 科大镜像源: http://mirrors.ustc.edu.cn/  

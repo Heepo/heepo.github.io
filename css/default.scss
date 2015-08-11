@@ -4,8 +4,6 @@
 /*-webkit-transition: all 0.2s ease-in-out;
 transition: all 0.2s ease-in-out;*/
 
-
-
 @import "reset";
 
 @font-face {font-family: 'iconfont';
@@ -16,297 +14,22 @@ transition: all 0.2s ease-in-out;*/
     url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
+@font-face{
+  font-family: 'Source Code Pro';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('EOT/SourceCodePro-Regular.eot'),
+       url('WOFF/OTF/SourceCodePro-Regular.otf.woff') format('woff'),
+       url('TTF/SourceCodePro-Regular.ttf') format('truetype');
+}
+
 .iconfont{
     font-family:"iconfont" !important;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
-}
-header {
-  box-shadow: 0 0 10px $shadowcolor;
-  .container {
-    padding: 3% 3% 5%;
-    margin: 0 auto;
-    .stlogo {
-      padding: 1rem 0;
-      img {
-        max-width: 156px;
-        max-height: 109px;
-        display: block;
-        margin: 0 auto;
-      }
-    }
-    .stnav {
-      ul {
-        li {
-          list-style: none;
-          display: block;
-          margin: 3rem auto;
-          letter-spacing: 0.5rem;
-          text-indent: .5rem;
-          text-align: center;
-          a {
-            text-decoration: none;
-            color: $fontcolor;
-            text-shadow: 2px 2px 10px grey;
-            -webkit-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-          }
-          a:hover {
-            text-shadow: 2px 2px 10px white;
-          }
-        }
-      }
-    }
-    .social-sites {
-      margin: 3rem auto 1rem;
-      ul {
-        text-align: center;
-        li {
-          list-style: none;
-          display: inline-block;
-          a {
-            text-decoration: none;
-            i {
-              text-shadow: 2px 2px 10px grey;
-              color: $lowkeyc;
-              margin: 0 0.5rem;
-              font-size: 1.5rem;
-              text-rendering: optimizeLegibility;
-              -webkit-transition: all 0.2s ease-in-out;
-              transition: all 0.2s ease-in-out;
-            }
-            i:hover {
-              color: $fontcolor;
-              text-shadow: 2px 2px 10px white;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-main {
-  padding: 5% 3% 5%;
-  article {
-    padding: 5%;
-    .post-title, .poe-title {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      line-height: 2.5rem;
-      color: $titlecolor;
-      text-shadow: 2px 2px 10px grey;
-    }
-    .post-date, .poe-date {
-      font-size: .8rem;
-      color: $lowkeyc;
-      margin: 1rem auto ;
-      text-shadow: 2px 2px 10px grey;
-    }
-    .post-content, .poe-content {
-      letter-spacing: 0.1rem;
-      line-height: 1.5rem;
-      p {
-        margin: 1rem auto;
-        color: $contentcolor;
-        font-weight: 500;
-      }
-    }
-  }
-  .page-index {
-    text-align: center;
-    padding: 0 5%;
-    max-width: 20rem;
-    margin: 0 auto;
-    span {
-      list-style: none;
-      display: block;
-      background-color: $postlistbgc;
-      margin: 1rem auto 1.5rem;
-      padding: 3%;
-      position: relative;
-      a {
-        text-decoration: none;
-        color: $postlistcolor;
-        font-size: 1rem;
-        line-height: 1.5rem;
-      }
-    }
-    .pre {
-      border-top-left-radius: 2em;
-      border-bottom-left-radius: 2em;
-      border-top-right-radius: .5em;
-      border-bottom-right-radius: .5em;
-    }
-    .next {
-      border-top-left-radius: .5em;
-      border-bottom-left-radius: .5em;
-      border-top-right-radius: 2em;
-      border-bottom-right-radius: 2em;
-    }
-  }
-  .recent-post {
-    ul {
-      list-style: none;
-      li {
-        border-radius: 1em;
-        box-shadow: 0px 0px 10px $shadowcolor;
-        margin: 2rem 0 3rem;
-        padding: 1rem .5rem;
-        a {
-          text-decoration: none;
-          color: $titlecolor;
-          text-shadow: 2px 2px 10px grey;
-          font-size: 1.5rem;
-          letter-spacing: .2rem;
-          line-height: 1.7rem;
-          margin: 1rem 1.5rem .4rem 1rem;
-          display: inline-block;
-        }
-        .post-date {
-          font-size: .7rem;
-          color: $lowkeyc;
-          text-shadow: 2px 2px 10px grey;
-          margin: 0 0 .3rem 1.2rem;
-        }
-        .excerpt {
-          padding: 3% .6rem 5% 1.1rem;
-          font-size: .9rem;
-          line-height: 1.5rem;
-          letter-spacing: .1rem;
-          color: $contentcolor;
-          .highlight {
-            padding-right: 3%;
-            pre {
-              overflow: hidden;
-            }
-          }
-        }
-      }
-    }
-  }
-  .post-list {
-    text-align: center;
-    padding: 0 5%;
-    .post-year {
-      font-size: 2rem;
-      color: $lowkeyc;
-      border-radius: 0.9rem;
-      margin: 2rem auto 1rem;
-      padding: 3% 3% 2%;
-      display: inline-block;
-      box-shadow: 0 0 5px $shadowcolor;      
-    }
-    li {
-      list-style: none;
-      background-color: $postlistbgc;
-      margin: 1rem auto 1.5rem;
-      border-radius: 30px;
-      padding: 3%;
-      position: relative;
-      span {
-        font-size: .5rem;
-        color: $postlistcolor;
-        position: absolute;
-        bottom: 36%;
-        left: .5rem;
-      }
-      a {
-        text-decoration: none;
-        color: $postlistcolor;
-        font-size: 1rem;
-        line-height: 1.5rem;
-      }
-    }
-  }
-  .categories, .tags {
-    text-align: center;
-    .cat-list, .tag-list {
-      margin: 2rem auto;
-      p {
-        display: inline-block;
-        background-color: $listbgc;
-        border-radius: .7rem;
-        font-size: 1rem;
-        margin: .5rem;
-        padding: .5rem;
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-        a {
-          text-decoration: none;
-          color: $listcolor;
-          text-transform: uppercase;
-          letter-spacing: .1rem;
-          -webkit-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
-        }
-      }
-      p:hover {
-        background-color: $listcolor;
-        a {
-          color: $listbgc;
-          font-size: 1.3rem;
-        }
-      }
-    }
-    .cat-index, .tag-index {
-      text-align: center;
-      padding: 0 5%;
-      margin-bottom: 15%;
-      p {
-        font-size: 1.5rem;
-        color: $lowkeyc;
-        margin: 2rem auto 1rem;
-        padding: 0 3%;
-        display: inline-block;
-        border-bottom: 2px solid $lowkeyc;
-      }
-      li { 
-        list-style: none;
-        background-color: $listbgc;
-        margin: 0 auto 1rem;
-        border-radius: 30px;
-        padding: 3%;
-        position: relative;
-        span {
-          font-size: .5rem;
-          color: $listcolor;
-          position: absolute;
-          bottom: 36%;
-          left: .5rem;
-        }
-        a {
-          text-decoration: none;
-          color: $listcolor;
-          font-size: 1rem;
-          line-height: 1.5rem;
-        }
-      }
-    }
-  }
-  .about {
-    text-align: center;
-    line-height: 2rem;
-    margin: 1rem;
-    .cn {
-      max-width: 336px;
-      letter-spacing: .3rem;
-      margin: 1rem auto;
-      padding: 1rem 1rem 2rem;
-      text-shadow: 2px 2px 10px grey;      
-      border-bottom: 2px solid $lowkeyc;
-    }
-    .en {
-      letter-spacing: .1rem;
-      padding: 1rem;
-      text-shadow: 2px 2px 10px grey;
-      span {
-        font-style: oblique;
-      }
-    }
-  }
 }
 
 @keyframes colorchanging {
@@ -326,13 +49,224 @@ main {
   to {color: $transpost;}
 }
 
+header {
+  .container {
+    padding: 3%;
+    background-color: $headerbgc;
+    color: $basiccolor;
+    .stlogo {
+      text-align: center;
+      a {
+        text-decoration: none;
+        font-size: 1.3em;
+        font-family: 'Source Code Pro';
+        color: $basiccolor;
+      }
+    }
+    .stnav {
+      ul {
+        li {
+          list-style: none;
+          text-align: center;
+          margin: .5em auto;
+          a {
+            text-decoration: none;
+            color: $basiccolor;
+          }
+        }
+      }
+    }
+    .social-sites {
+      ul {
+        text-align: center;
+        li {
+          list-style: none;
+          display: inline-block;
+          a {
+            text-decoration: none;
+            i {
+              color: $basiccolor;
+              margin: 0 0.5em;
+              text-rendering: optimizeLegibility;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  padding: 3%;
+  background-color: $basiccolor;
+  article {
+    .ptags {
+      a {
+        text-decoration: none;
+        background-color: $indexbgc;
+        color: $indexcolor;
+        font-size: .8em;
+        margin-right: .5em;
+        padding: .4em .3em .3em;
+      }
+    }
+    .post-title, .poe-title {
+      margin-top: .5em;
+      font-size: 1.3rem;
+    }
+    .post-date, .poe-date {
+      font-size: .8rem;
+    }
+    .post-content {
+      margin-top: 1em;
+      overflow: auto;
+    }
+  }
+  .page-index {
+    text-align: center;
+    margin-top: .5em;
+    span {
+      list-style: none;
+      display: inline-block;
+      margin: .5em auto 0;
+      padding: 0 .5em;
+      a {
+        text-decoration: none;
+        color: $indexcolor;
+      }
+    }
+    .pre {
+      border-left: 3px solid $borderc;
+      background-color: $indexbgc;
+    }
+    .next {
+      border-right: 3px solid $borderc;
+      background-color: $indexbgc;
+    }
+  }
+  #disqus_thread {
+    margin: 3rem 3% 0;
+  }
+  .recent-post {
+    ul {
+      list-style: none;
+      li {
+        border-bottom: 1px dashed $borderc;
+        margin: 1em 0;
+        position: relative;
+        a {
+          text-decoration: none;
+          color: $postlistcolor;
+          font-size: 1.3em;
+        }
+        .excerpt {
+          margin-top: .5em;
+          font-size: .9rem;
+          color: $contentcolor;
+        }
+        .ptags {
+          padding-bottom: .3em;
+          a {
+            text-decoration: none;
+            background-color: $indexbgc;
+            color: $indexcolor;
+            font-size: .6em;
+            margin-right: .5em;
+            padding: .4em .3em .3em;
+          }
+        }
+        .post-date {
+          font-size: .7rem;
+          color: $datecolor;
+          position: absolute;
+          bottom: .3em;
+          right: 0;
+        }
+      }
+    }
+  }
+  .post-list {
+    padding: 0 3%;
+    .post-year {
+      text-align: right;
+      font-size: 1.5em;
+      color: $datecolor;
+      margin: .5em auto;
+      border-bottom: 1px dashed $borderc; 
+    }
+    li {
+      list-style: none;
+      text-align: left;
+      span {
+        font-size: .5rem;
+        color: $datecolor;
+      }
+      a {
+        text-decoration: none;
+        color: $postlistcolor;
+      }
+    }
+  }
+  .categories, .tags {
+    text-align: center;
+    padding: 0 3%;
+    .cat-list, .tag-list {
+      margin-top: 1em;
+      padding-bottom: .3em;
+      a {
+        text-decoration: none;
+        background-color: $indexbgc;
+        color: $indexcolor;
+        font-size: .8em;
+        margin-right: .5em;
+        padding: .4em .3em .3em;
+      }
+    }
+    .cat-index, .tag-index {
+      p {
+        text-align: right;
+        font-size: 1.3rem;
+        color: $titlecolor;
+        margin: 2rem auto 1rem;
+        border-bottom: 1px dashed $borderc;
+      }
+      li { 
+        list-style: none;
+        text-align: left;
+        span {
+          font-size: .5rem;
+          color: $datecolor;
+        }
+        a {
+          text-decoration: none;
+          color: $postlistcolor;
+        }
+      }
+    }
+  }
+  .about {
+    text-align: center;
+    line-height: 1.5em;
+    margin-top: 2em;
+    .cn {
+      letter-spacing: .3rem;
+      padding-bottom: 2em;    
+      border-bottom: 1px dashed $lowkeyc;
+    }
+    .en {
+      padding-top: 2em;
+      font-family: 'Source Code Pro';
+      span {
+        font-style: oblique;
+      }
+    }
+  }
+}
+
 footer {
-  padding: 3% 5%;
-  margin-top: 5%;
-  min-height: 7rem;
-  padding-top: 4rem;
+  padding: 1.7em 3% .2em;
+  background-color: $footerbgc;
   position: relative;
-  box-shadow: 0 0 10px $shadowcolor;
   iframe {
       position: absolute;
       left: 50%;
@@ -352,125 +286,209 @@ footer {
     z-index: 2;
     i {
       display: block;
-      text-shadow: 2px 2px 10px grey;
       text-align: right;
       padding: .5rem;
-      animation-name: colorchanging;
-      animation-duration: 1.5s;
-      animation-iteration-count: infinite;
-      animation-direction:alternate;
-      animation-timing-function: ease-in-out;
-      -webkit-animation-timing-function: ease-in-out;
-      -webkit-animation-direction:alternate;
-      -webkit-animation-name: colorchanging;
-      -webkit-animation-duration: 1.5s;
-      -webkit-animation-iteration-count: infinite;
+      color: $footerlink;
     }
   }
   .states {
-    color: $fontcolor;
+    color: $footertext;
     text-align: center;
     a {
       text-decoration: none;
-      color: $transpre;
+      color: $footerlink;
     }
   }
 }
 @media only screen and (min-width: 20em) {
   header {
     .container {
-      padding: .5rem;
-      .stnav {
-        text-align: center;
-        ul {
-          li {
-            display: inline-block;
-            margin: .5rem auto .5rem;
-          }
-        }
-      }
-      .social-sites {
-        margin-top: .5rem;
-      }
-    }
-  }
-}
-@media only screen and (min-width: 30em) {
-  header {
-    .container {
+      padding: 0;
       position: relative;
-      padding-bottom: 1%;
-      max-height: 14.7rem;
-      .stnav {
-        ul {
-          text-align: center;
-          padding-bottom: 1rem;
-          li {
-            display: inline-block;
-            margin: 2rem 1.1rem 0;
-            letter-spacing: .1rem;
-            text-indent: .1rem;
-          }
+      background-color: $headerbgc;
+      .stlogo {
+        text-align: left;
+        padding: .8em 0 0 .5em;
+        a {
+          text-decoration: none;
+          font-family: 'Source Code Pro';
+          color: $headerfont;
+          font-weight: 600;
         }
       }
-      .social-sites {
-        margin: 1rem auto 0;
+      .stnav {
+        text-align: right;
+        background-color: $headerbgc;
         position: absolute;
-        top: 0;
-        right: 1rem;
+        right: 0;
+        top: 3rem;
+        padding-right: .5em;
+        border-bottom-left-radius: 1rem;
+        border-top-left-radius: 1rem;
+        border: 3px solid $mainbgc;
+        border-right: 0 solid $mainbgc;
         ul {
+          text-align: right;
           li {
             a {
-              i {
-                font-size: 1.3em;
-                margin: 0 .1rem;
-              }
-            }
+              color: $basiccolor;
+              font-size: .8rem;
+            }  
+            display: inline-block;
+            margin: .5em;
+          }
+        }
+      }
+      .social-sites {
+        display: inline-block;
+        ul {
+          position: absolute;
+          right: .8em;
+          top: .8em;
+          li a i {
+            margin: 0 .1em;
+            color: $socialcolor;
           }
         }
       }
     }
   }
   main {
+    padding: 3em 3%;
+    background-color: $mainbgc;
+    min-height: 40em;
+    color: $contentcolor;
+    .categories, .tags {
+      .cat-list, .tag-list {
+        a {
+          border-radius: .7em;
+          display: inline-block;
+          margin-bottom: 1em;
+        }
+      }
+    }
     article {
+      .ptags a {
+        border-radius: .5em;
+      }
       .post-title {
-        text-align: center;
+        color: $postlistcolor;
       }
-      .post-date {
-        text-align: center;
-        margin: 1rem auto 2rem;
+    }
+    .page-index {
+      border-top: 1px dashed $borderc;
+      margin-top: 1em;
+      padding: 1em 0 1.3em;
+      span {
+        border-radius: .5em;
       }
-      .poe-title, .poe-date, .poe-content {
-        margin-left: 2rem;
-        text-align: center;
+      border-bottom: 1px dashed $borderc;
+    }
+  }
+  footer {
+    padding-bottom: 1.7em;
+    a {
+      font-family: 'Source Code Pro';
+    }
+  }
+}
+@media only screen and (min-width: 30em) {
+  header {
+    .container {
+      .stlogo {
+        display: inline-block;
+        padding: .3em 0 .4em 2em;
+      }
+      .stnav {
+        top: 1em;
+        padding-right: 1.5em;
+      }
+      .social-sites ul {
+        right: auto;
+        left: 3.5em;
+        top: 2.4em;
+        li a i {
+          color: $headerbgc;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+  main {
+    padding-left: 0;
+    article {
+      position: relative;
+      .ptags {
+        position: absolute;
+        left: 2em;
+        top: 4.5rem;
+        a {
+          display: inline-block;
+          font-size: .7rem;
+          padding: .1em .2em;
+        }
+      }
+      .post-title, .poe-title {
+        text-align: left;
+        display: inline-block;
+        padding-left: 2rem;
+        padding-right: 1rem;
+        margin: 2rem 0 2em;
+        color: $postlistcolor;
+      }
+      .post-date, .poe-date {
+        display: inline-block;
+        position: absolute;
+        right: 1.3em;
+        top: 2.5rem;
       }
       .post-content {
-        margin: 0 10% 0 15%;
+        padding: 0 1em 0 2em;
       }
+      .poe-content {
+        text-align: center;
+        letter-spacing: .5em;
+        line-height: 2em;
+        p {
+          margin: 3em;
+        }
+      }
+    }
+    #disqus_thread {
+      margin: 3rem 1em 0 2em;
     }
     .recent-post {
       ul {
         li {
-          margin: 1.6rem 4rem 4rem;
+          margin: 1.6rem 1em 2em 2em;
         }
       }
     }
     .post-list {
       .post-year {
-        margin: 1.5rem auto 1.5rem;
+        margin: 1em auto 1em;
       }
       li {
-        margin: 0 auto 1.3rem;
-        max-width: 25rem;
+        margin: 0 1em .5em ;
       }
     }
     .categories, .tags {
-      .cat-index, .tag-index {
-        li {
-          margin: 0 auto 1.3rem;
-          max-width: 25rem;
+      .cat-list, .tag-list {
+        margin-top: 2em;
+        padding-bottom: 0;
+        a {
+          padding: .1em .3em;
         }
       }
+      .cat-index, .tag-index {
+        li {
+          margin: 0 1em .5em;
+        }
+      }
+    }
+    .about {
+      padding: 0 1em 0 2em;
+      line-height: 2em;
     }
   }
 }
@@ -478,62 +496,27 @@ footer {
 @media only screen and (min-width: 48em) {
   header {
     .container {
-      max-width: 60rem;
-      text-align: justify;
-      position: relative;
-      margin: 0 10%;
-      padding: 0;
-      .stlogo {
-        display: inline-block;
-      }
-      .stnav {
-        position: absolute;
-        right: 10%;
-        bottom: 15%;
-        ul {
-          padding-bottom: 0;
-          li {
-            display: inline-block;
-            font-size: 1rem;
-            margin: 0 1.3em;
-            a {
-              color: $fontcolor;
-              -webkit-transition: all 0.2s ease-in-out;
-              transition: all 0.2s ease-in-out;
-            }
-            a:hover {
-              color: $lowkeyc;
-            }
-          }
-        }
-      }
-      .social-sites {
-        right: -4rem;
-        top: 5.3rem;
-        ul {
-          display: inline-block;
-          li {
-            a {
-              i {
-                font-size: 1.2rem;
-                margin: 0 .4rem;
-              }
-            }
-          }
-        }
-      }
     }
   }
   main {
     overflow: hidden;
+    padding-bottom: 0rem;
     article {
       padding: 5% 10%;
-      .poe-title, .poe-date, .poe-content {
-        text-align: center;
-      }
-      .post-content {
+      .wrap {
         margin: 0 10% 0 15%;
+        .poe-title, .poe-date, .poe-content {
+          text-align: center;
+        }
+        .post-content {
+          margin: 0;
+          padding: 3% 5%;
+        }
       }
+
+    }
+    #disqus_thread {
+      margin: 7rem 15% 0;
     }
     .page-index {
       max-width: 70em;
@@ -545,9 +528,31 @@ footer {
       }
     }
     .recent-post {
+      margin: 0 10%;
+      aside {
+        text-align: justify;
+        .area-name {
+          color: $fontcolor;
+          box-shadow: 0 0 0 white;
+          border-radius: 0;
+          font-size: 1.5rem;
+          border-bottom: 2px solid #ccc;
+          position: relative;
+          padding: 0 0 1% 0;
+        }
+        img {
+          max-width: 2rem;
+          max-height: 2rem;
+          transform: rotate(0deg);
+          position: absolute;
+          left: 2.5em;
+          top: 2.6em;
+        }
+      }    
       ul {
         display: block;
-        margin: 0 auto;
+        margin-left: 10em;
+        margin-top: -4em;
         max-width: 50rem;
         li {
           border-bottom-left-radius: 1em;

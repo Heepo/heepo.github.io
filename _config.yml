@@ -1,6 +1,8 @@
 # site settings
 baseurl: "" # the subpath of the website
 highlighter: pygments
+paginate: 3
+paginate_path: "/page:num"
 
 # build settings
 exclude: ["Gemfile", "Gemfile.lock"]

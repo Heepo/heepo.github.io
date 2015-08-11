@@ -15,9 +15,9 @@ layout: default
     {% for num in (0..site.tags.size) %}
       {% unless forloop.last %}
         {% capture index %}{{ tg[num] }}{% endcapture %}
-        <p><a href="#{{ num }}">{{ tg[num] }}
+        <a href="#{{ index }}">{{ tg[num] }}
           <sup class="count">{{site.tags[index].size}}</sup>
-        </a></p>
+        </a>
       {% endunless %}
     {% endfor %}
   </div>
@@ -26,7 +26,7 @@ layout: default
     {% for num in (0..site.tags.size) %}  
       {% unless forloop.last %}
         {% capture index %}{{ tg[num] }}{% endcapture %}
-        <p id="{{ num }}">{{ tg[num] }}</p>
+        <p id="{{ index }}">{{ tg[num] }}</p>
         {% for post in site.tags[index] %}
           <li><span>{{ post.date | date: "%b %d" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}

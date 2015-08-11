@@ -1,13 +1,25 @@
 ---
 layout: default
 ---
+
 <article>
-  <h1 class="post-title">{{ page.title }}</h1>
-  <p class="post-date">{{ page.date | date: "%F"}}</p>
-  <section class="post-content">
-    {{ content }}
-  </section>
+  <div class="wrap">
+    <aside class="ptags">
+    {% for tag in page.tags %}
+      <a href="/tags/#{{ tag }}">
+        {{ tag }}
+        <sup>{{ site.tags[tag].size }}</sup>
+      </a>
+    {% endfor %}
+    </aside>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-date">{{ page.date | date: "%F"}}</p>
+    <section class="post-content">
+      {{ content }}
+    </section>
+  </div>
 </article>
+
 <section class="page-index">
 {% if page.previous.url != nil %}
   <span class="pre">
@@ -20,3 +32,17 @@ layout: default
   </span>
 {% endif %}
 </section>
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'lamosblog';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
