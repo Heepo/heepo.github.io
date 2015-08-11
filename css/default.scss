@@ -403,7 +403,6 @@ footer {
         padding-right: 1.5em;
       }
       .social-sites {
-        /*display: inline-block;*/
         ul {
           right: auto;
           left: 3.5em;
@@ -491,6 +490,15 @@ footer {
     .about {
       padding: 0 1em 0 2em;
       line-height: 2em;
+    }
+  }
+  footer {
+    padding-top: 3em;
+    iframe {
+      bottom: 2.9em;
+    }
+    .hide {
+      bottom: 3.6em;
     }
   }
 }
