@@ -1,8 +1,5 @@
 ---
 ---
-/*text-shadow: 2px 2px 10px grey;*/
-/*-webkit-transition: all 0.2s ease-in-out;
-transition: all 0.2s ease-in-out;*/
 
 @import "reset";
 
@@ -136,11 +133,11 @@ main {
       }
     }
     .pre {
-      border-left: 3px solid $borderc;
+      border-left: 10px solid $borderc;
       background-color: $indexbgc;
     }
     .next {
-      border-right: 3px solid $borderc;
+      border-right: 10px solid $borderc;
       background-color: $indexbgc;
     }
   }
@@ -374,7 +371,7 @@ footer {
         color: $postlistcolor;
       }
       .post-content {
-        letter-spacing: .2em;
+        letter-spacing: .1em;
         line-height: 1.5em;
       }
       .poe-title {
@@ -475,8 +472,16 @@ footer {
         }
       }
     }
+    .page-index {
+      margin: 4em 1em 2em 2em;
+      background-color: $commentcolor;
+      border-top: 0;
+      border-bottom: 0;
+    }
     #disqus_thread {
       margin: 3rem 1em 0 2em;
+      background-color: $commentcolor;
+      padding: 4%;
     }
     .recent-post {
       ul {
@@ -526,86 +531,60 @@ footer {
 @media only screen and (min-width: 48em) {
   header {
     .container {
+      .stlogo {
+        padding-left: 6em;
+      }
+      .stnav {
+        text-align: right;
+        background-color: transparent;
+        position: absolute;
+        right: auto;
+        left: 35%;
+        top: 0;
+        padding-right: .5em;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border: 0px solid $mainbgc;
+        border-right: 0 solid $mainbgc;
+        ul {
+          text-align: right;
+          li {
+            a {
+              color: $basiccolor;
+              letter-spacing: .1em;
+              font-size: 1.1rem;
+            }  
+            display: inline-block;
+            margin: .5em 1.5em;
+          }
+        }
+      }
+      .social-sites {
+        ul {
+          left: auto;
+          right: 5em;
+          top: 0.4em;
+          li a i {
+            color: $mainbgc;
+            margin: 0 .2em;
+          }
+        }
+      }
     }
   }
   main {
-    overflow: hidden;
-    padding-bottom: 0rem;
+    padding: 3em 4.1em;
     article {
-      padding: 5% 10%;
-      .wrap {
-        margin: 0 10% 0 15%;
-        .poe-title, .poe-date, .poe-content {
-          text-align: center;
-        }
-        .post-content {
-          margin: 0;
-          padding: 3% 5%;
-        }
+      .ptags {
+        top: 4.7em;
       }
-
-    }
-    #disqus_thread {
-      margin: 7rem 15% 0;
-    }
-    .page-index {
-      max-width: 70em;
-      span {
-        display: inline-block;
-        margin: 0 1em;
-        padding: .3rem 3%;
-        min-width: 15rem;
+      .post-content {
+        margin-top: 3em;
       }
     }
-    .recent-post {
-      margin: 0 10%;
-      aside {
-        text-align: justify;
-        .area-name {
-          color: $fontcolor;
-          box-shadow: 0 0 0 white;
-          border-radius: 0;
-          font-size: 1.5rem;
-          border-bottom: 2px solid #ccc;
-          position: relative;
-          padding: 0 0 1% 0;
-        }
-        img {
-          max-width: 2rem;
-          max-height: 2rem;
-          transform: rotate(0deg);
-          position: absolute;
-          left: 2.5em;
-          top: 2.6em;
-        }
-      }    
-      ul {
-        display: block;
-        margin-left: 10em;
-        margin-top: -4em;
-        max-width: 50rem;
-        li {
-          border-bottom-left-radius: 1em;
-          box-shadow: -2px 2px 3px $shadowcolor;
-        }
-      }
-    }
-    .post-list {
-      .post-year {
-        margin-top: 3.5rem;
-        padding: .2em 3% .1em;
-      }
-      li {
-        padding: 1em 3% 1em;
-      }
-    }
-    .categories, .tags {
-      .cat-index, .tag-index {
-        li {
-          padding: 1em 3% 1em;
-        }
-      }
+    .about {
+      padding: 2em 30% 0;
+      line-height: 2.5em;
     }
   }
 }
-

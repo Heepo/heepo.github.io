@@ -13,13 +13,11 @@ layout: default
         {% continue %}
       {% endunless %}
 
-      <li><span>{{ post.date | date: "%b %d" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
-      
-      {% if post.previous %}
-        {% if year != pyear %}
-          <p class="post-year">{{ pyear }}</p>
-        {% endif %}
+      {% if year != pyear %}
+        <p class="post-year">{{ year }}</p>
       {% endif %}
+
+      <li><span>{{ post.date | date: "%b %d" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </section>

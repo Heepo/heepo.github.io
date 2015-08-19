@@ -2,7 +2,7 @@
 layout: post
 title: Homebrew镜像源
 categories: 工具
-tags: Homebrew 镜像源
+tags: Homebrew 镜像源 OSX
 ---
 替换homebrew默认源为国内镜像源  
 
