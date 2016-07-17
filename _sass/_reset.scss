@@ -4,10 +4,10 @@
  */
 
 //variables
-$headerbgc: #517F44;
-$footerbgc: #517F44;
+$headerbgc: #4b606f;
+$footerbgc: #4b606f;
 $basiccolor: #E7E9DE;
-$borderc: #517F44;
+$borderc: #4b606f;
 $indexbgc: #A8A8A8;
 $indexcolor: #E7E9DE;
 $headerfont: #E7E9DE;
@@ -22,13 +22,16 @@ $footerlink: #E7E9DE;
 $shadowcolor: #cccccc;
 $titlecolor: #A8A8A8;
 $contentcolor: #7A7A7A;
-$postlistcolor: #517F44;
-$postlistbgc: #74AF2D;
-$listbgc: #74AF2D;
+$postlistcolor: #ac3e40;
+$postNameColor: #ac3e40;
+$postDateColor: #a8a8a8;
+$articleColor: #4b606f;
+$postlistbgc: #ac3e40;
+$listbgc: #ac3e40;
 $listcolor: white;
 $commentcolor: #DBE2D3;
 $transpost: #A42F11;
-$transpre: #74AF2D;
+$transpre: #4b606f;
 
 body {
   font-family: "Gill Sans", "Hannotate SC", "Hiragino Sans GB", Tahoma, Arial, Roboto, "Droid Sans", "Helvetica Neue", Helvetica, "Droid Sans Fallback", "Heiti SC", "Microsoft YaHei", Simsun, sans-self;
@@ -36,7 +39,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-html, body, div, h1, h2, h3, h4, h5, h6, p, em, img, 
+html, body, div, h1, h2, h3, h4, h5, h6, p, em, img,
 small, strong, ul, li, article, aside, footer, header, nav,
 section, audio {
   margin: 0;

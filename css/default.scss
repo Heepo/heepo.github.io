@@ -47,16 +47,17 @@
 }
 
 header {
+  background-color: $headerbgc;
+  padding: 1rem 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2px;
   .container {
-    padding: 3%;
-    background-color: $headerbgc;
     color: $basiccolor;
     .stlogo {
       text-align: center;
       a {
         text-decoration: none;
         font-size: 1.3em;
-        font-family: 'Source Code Pro';
         color: $basiccolor;
       }
     }
@@ -94,39 +95,53 @@ header {
 }
 
 main {
-  padding: 3%;
   background-color: $basiccolor;
+  padding: 7% 0;
   article {
     .ptags {
-      a {
-        text-decoration: none;
-        background-color: $indexbgc;
-        color: $indexcolor;
-        font-size: .8em;
-        margin-right: .5em;
-        padding: .4em .3em .3em;
+      ul {
+        li {
+          text-align: center;
+          margin: 0.5rem 0;
+          a {
+            text-decoration: none;
+            background-color: $indexbgc;
+            color: $indexcolor;
+            font-size: .8em;
+            padding: .3em .5em;
+            border-radius:0.2rem;
+          }
+        }
       }
     }
-    .post-title, .poe-title {
-      margin-top: .5em;
-      font-size: 1.3rem;
-    }
-    .post-date, .poe-date {
-      font-size: .8rem;
-    }
-    .post-content {
-      margin-top: 1em;
-      overflow: auto;
+    .wrap {
+      margin: 1rem 0;
+      padding: 1rem .5rem;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+      .post-title, .poe-title {
+        margin: .4em 0;
+        font-size: 1.3rem;
+        color: $postNameColor;
+      }
+      .post-date, .poe-date {
+        font-size: .8rem;
+        color: $postDateColor;
+      }
+      .post-content {
+        margin: 1rem 0;
+        overflow: auto;
+        color: $articleColor;
+      }
     }
   }
   .page-index {
     text-align: center;
-    margin-top: .5em;
+    margin: .5rem 0;
     span {
       list-style: none;
       display: inline-block;
-      margin: .5em auto 0;
-      padding: 0 .5em;
+      margin: .5rem 0;
+      padding: .2rem .5rem;
       a {
         text-decoration: none;
         color: $indexcolor;
@@ -135,14 +150,19 @@ main {
     .pre {
       border-left: 10px solid $borderc;
       background-color: $indexbgc;
+      border-radius: .6em .2em .2em .6em;
     }
     .next {
       border-right: 10px solid $borderc;
       background-color: $indexbgc;
+      border-radius: .2em .6em .6em .2em;
     }
   }
   #disqus_thread {
-    margin: 3rem 3% 0;
+    margin: 3rem 0;
+    padding: 1rem .5rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    font-family: "Gill Sans", "Hannotate SC" !important;
   }
   .recent-post {
     ul {
@@ -189,7 +209,7 @@ main {
       font-size: 1.5em;
       color: $datecolor;
       margin: .5em auto;
-      border-bottom: 1px dashed $borderc; 
+      border-bottom: 1px dashed $borderc;
     }
     li {
       list-style: none;
@@ -227,7 +247,7 @@ main {
         margin: 2rem auto 1rem;
         border-bottom: 1px dashed $borderc;
       }
-      li { 
+      li {
         list-style: none;
         text-align: left;
         span {
@@ -247,7 +267,7 @@ main {
     margin-top: 2em;
     .cn {
       letter-spacing: .3rem;
-      padding-bottom: 2em;    
+      padding-bottom: 2em;
       border-bottom: 1px dashed $lowkeyc;
     }
     .en {
@@ -299,10 +319,12 @@ footer {
 }
 @media only screen and (min-width: 20em) {
   header {
+    vertical-align: center;
     .container {
-      padding: 0;
+      padding: 3%;
       position: relative;
       background-color: $headerbgc;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
       .stlogo {
         text-align: left;
         padding: 1em 0 1.5em .5em;
@@ -314,6 +336,7 @@ footer {
         }
       }
       .stnav {
+        padding: 3%;
         text-align: right;
         background-color: $headerbgc;
         position: absolute;
@@ -330,14 +353,16 @@ footer {
             a {
               color: $basiccolor;
               font-size: .8rem;
-            }  
+            }
             display: inline-block;
             margin: .5em;
           }
         }
       }
       .social-sites {
+        // padding: 3%;
         ul {
+          padding: 3%;
           position: absolute;
           right: .8em;
           top: .8em;
@@ -531,6 +556,8 @@ footer {
 @media only screen and (min-width: 48em) {
   header {
     .container {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       .stlogo {
         padding-left: 6em;
       }
@@ -553,7 +580,7 @@ footer {
               color: $basiccolor;
               letter-spacing: .1em;
               font-size: 1.1rem;
-            }  
+            }
             display: inline-block;
             margin: .5em 1.5em;
           }
