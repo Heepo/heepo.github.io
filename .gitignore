@@ -31,3 +31,6 @@ _site
 .sass-cache
 Gemfile
 Gemfile.lock
+
+# SCSS
+.scss-lint.yml

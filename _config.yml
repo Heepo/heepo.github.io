@@ -13,3 +13,6 @@ $iconcolor: #C2B8B4;
 $fontcolor: #736157;
 $textcolor: #666666;
 $shadowcolor: #6A6F6F;
+
+# Gems
+gems: [jekyll-paginate]
