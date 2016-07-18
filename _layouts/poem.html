@@ -2,17 +2,20 @@
 layout: default
 ---
 
-
 <article>
-  <div class="wrap">
   <aside class="ptags">
-    {% for tag in page.tags %}
-      <a href="/tags/#{{ tag }}">
-        {{ tag }}
-        <sup>{{ site.tags[tag].size }}</sup>
-      </a>
-    {% endfor %}
-    </aside>
+    <ul>
+      {% for tag in page.tags %}
+        <li>
+          <a href="/tags/#{{ tag }}">
+            {{ tag }}
+            <sup>{{ site.tags[tag].size }}</sup>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
+  <div class="wrap">
     <h1 class="poe-title">{{ page.title }}</h1>
     <p class="poe-date">{{ page.date | date: "%F"}}</p>
     <section class="poe-content">
@@ -20,6 +23,7 @@ layout: default
     </section>
   </div>
 </article>
+
 <section class="page-index">
 {% if page.previous.url != nil %}
   <span class="pre">
@@ -32,6 +36,7 @@ layout: default
   </span>
 {% endif %}
 </section>
+
 <!-- Disqus -->
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -44,4 +49,4 @@ layout: default
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
