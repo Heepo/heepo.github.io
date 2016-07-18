@@ -167,53 +167,58 @@ main {
   .recent-post {
     ul {
       list-style: none;
+      padding: 0 0.5rem;
       li {
-        border-bottom: 1px dashed $borderc;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
         margin: 1em 0;
+        padding : 0.5rem 0.5rem;
         position: relative;
+        border-radius: 3px;
         a {
           text-decoration: none;
           color: $postlistcolor;
           font-size: 1.3em;
         }
         .excerpt {
-          margin-top: .5em;
-          font-size: .9rem;
+          margin-top: 1.5rem;
+          font-size: .8rem;
           color: $contentcolor;
+          line-height: 1.4rem;
         }
         .ptags {
-          padding-bottom: .3em;
           a {
             text-decoration: none;
             background-color: $indexbgc;
             color: $indexcolor;
             font-size: .6em;
-            margin-right: .5em;
-            padding: .4em .3em .3em;
+            margin: .2rem .3rem 0 0;
+            padding: .1rem .2rem;
+            border-radius: .2rem;
+            display: inline-block;
           }
         }
         .post-date {
           font-size: .7rem;
           color: $datecolor;
-          position: absolute;
-          bottom: .3em;
-          right: 0;
+          margin-top: 1.5rem;
+          display: inline-block;
         }
       }
     }
   }
   .post-list {
-    padding: 0 3%;
     .post-year {
       text-align: right;
       font-size: 1.5em;
       color: $datecolor;
-      margin: .5em auto;
-      border-bottom: 1px dashed $borderc;
+      margin: .5em .3rem;
     }
     li {
       list-style: none;
-      text-align: left;
+      margin: 0 .3rem;
+      padding: .5rem .5rem;
+      border-radius: 3px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
       span {
         font-size: .5rem;
         color: $datecolor;
@@ -225,18 +230,17 @@ main {
     }
   }
   .categories, .tags {
-    text-align: center;
-    padding: 0 3%;
     .cat-list, .tag-list {
-      margin-top: 1em;
-      padding-bottom: .3em;
+      margin-top: 1rem;
+      text-align: center;
       a {
+        border-radius: .3rem;
         text-decoration: none;
         background-color: $indexbgc;
         color: $indexcolor;
         font-size: .8em;
-        margin-right: .5em;
-        padding: .4em .3em .3em;
+        margin-right: .8rem;
+        padding: .3rem .3rem;
       }
     }
     .cat-index, .tag-index {
@@ -244,10 +248,13 @@ main {
         text-align: right;
         font-size: 1.3rem;
         color: $titlecolor;
-        margin: 2rem auto 1rem;
-        border-bottom: 1px dashed $borderc;
+        margin: 2rem .3rem 1rem;
       }
       li {
+        margin: 0 .3rem;
+        padding: .5rem .5rem;
+        border-radius: 3px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
         list-style: none;
         text-align: left;
         span {
